@@ -31,7 +31,7 @@ public class App {
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
-        System.out.print(beamUser);
+        System.out.println(beamUser);
         beamChatConnectable = beamChat.makeConnectable(beam);
         boolean connected = false;
         try {
@@ -42,7 +42,7 @@ public class App {
         if (connected) {
             beamChatConnectable.send(AuthenticateMessage.from(beamUser.channel, beamUser, beamChat.authkey));
             beamChatConnectable.send(ChatSendMethod.of("Test1"));
-            beamChatConnectable.on(IncomingMessageEvent.class, new Events());
+            beamChatConnectable.on(IncomingMessageEvent.class, new MessageHandler());
 
         }
 

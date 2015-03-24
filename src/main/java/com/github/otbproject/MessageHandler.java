@@ -7,7 +7,7 @@ import pro.beam.api.resource.chat.events.data.IncomingMessageData;
 /**
  * Created by Justin on 19/03/2015.
  */
-public class Events implements EventHandler<IncomingMessageEvent> {
+public class MessageHandler implements EventHandler<IncomingMessageEvent> {
 
     @Override
     public void onEvent(IncomingMessageEvent event) {
